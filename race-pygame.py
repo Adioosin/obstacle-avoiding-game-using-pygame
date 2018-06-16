@@ -139,6 +139,9 @@ def game_pause():
                 pygame.quit()
                 quit()
         #gameDisplay.fill(white)
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_p or event.key == pygame.K_SPACE:
+                    unpause()
         
         
         button("Continue",150,450,100,50,green,bright_green,unpause)
@@ -199,7 +202,7 @@ def game_loop():
                     x_change = -5
                 elif event.key ==pygame.K_RIGHT:
                     x_change = 5
-                elif event.key == pygame.K_p:
+                elif event.key == pygame.K_p or event.key == pygame.K_SPACE:
                     pause = True
                     game_pause()
             #dont change x if we lift the finger from the key        
@@ -241,6 +244,6 @@ def game_loop():
         clock.tick(60)
 
 game_intro()
-game_loop() 
+#game_loop() 
 pygame.quit()
 quit()
