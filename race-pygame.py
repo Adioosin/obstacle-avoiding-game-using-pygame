@@ -2,7 +2,7 @@
 """
 Created on Sat Jun 16 13:50:55 2018
 
-@author: guest11
+@author: Aditya Sinha
 """
 
 import pygame
